@@ -1,12 +1,9 @@
 package com.jobfinder.search_for_jobs.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jobfinder.search_for_jobs.dto.JobResponse;
 import com.jobfinder.search_for_jobs.dto.JobsResponse;
-import com.jobfinder.search_for_jobs.mapper.JobMapper;
-import com.jobfinder.search_for_jobs.model.Jobs;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
+
 
 import java.io.IOException;
 import java.net.URI;
