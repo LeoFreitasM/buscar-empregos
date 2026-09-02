@@ -14,6 +14,10 @@ public class JobsResponse {
 
     }
 
+    public JobsResponse(List<JobResponse> data) {
+        this.data = data;
+    }
+
     public List<JobResponse> getData() {
         return data;
     }

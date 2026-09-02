@@ -9,6 +9,8 @@ import com.jobfinder.search_for_jobs.model.Jobs;
 import com.jobfinder.search_for_jobs.service.JobsService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("/jobs")
@@ -25,14 +27,15 @@ public class JobsController {
     }
 
     @GetMapping("/searchJobs")
-    public Jobs saveJobs(JobResponse jobResponse){
+    public List<Jobs> saveJobs(){
 
-        return jobsService.saveJob(jobResponse);
+        return jobsService.saveJob();
     }
 
-    /*@GetMapping("/searchJobs")
-    public JobsResponse saveJobs(Gupy gupy){
-        return gupy.searchForJob();
-    }*/
+    @GetMapping("/searchData")
+    public List<Jobs> findAll(){
+
+       return jobsService.findAll();
+    }
 
 }

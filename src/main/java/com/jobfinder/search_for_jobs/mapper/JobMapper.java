@@ -15,14 +15,12 @@ public class JobMapper {
     }
 
     public Jobs toEntity(JobResponse response){
-        Jobs job = new Jobs();
 
+        Jobs job = new Jobs();
 
         job.setTitle(response.getName());
         job.setLink(response.getJobUrl());
 
-
         return job;
     }
-
 }
