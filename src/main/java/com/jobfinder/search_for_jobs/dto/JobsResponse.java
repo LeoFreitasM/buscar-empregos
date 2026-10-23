@@ -1,6 +1,5 @@
 package com.jobfinder.search_for_jobs.dto;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.List;

@@ -5,6 +5,7 @@ import com.jobfinder.search_for_jobs.dto.JobResponse;
 import com.jobfinder.search_for_jobs.model.Jobs;
 import org.springframework.stereotype.Component;
 
+
 @Component
 public class JobMapper {
 
@@ -12,6 +13,7 @@ public class JobMapper {
 
     public JobMapper(Gupy gupy){
         this.gupy = gupy;
+
     }
 
     public Jobs toEntity(JobResponse response){
@@ -20,7 +22,9 @@ public class JobMapper {
 
         job.setTitle(response.getName());
         job.setLink(response.getJobUrl());
+        job.setCityJob(response.getCity());
 
         return job;
     }
+
 }

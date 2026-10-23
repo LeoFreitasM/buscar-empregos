@@ -7,7 +7,7 @@ public class JobResponse {
 
     private String name;
     private String jobUrl;
-
+    private String city;
 
     public JobResponse(){
 
@@ -21,7 +21,6 @@ public class JobResponse {
         this.name = name;
     }
 
-
     public String getJobUrl() {
         return jobUrl;
     }
@@ -30,11 +29,20 @@ public class JobResponse {
         this.jobUrl = jobUrl;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     @Override
     public String toString() {
         return "JobResponse{" +
                 "name='" + name + '\'' +
                 ", jobUrl='" + jobUrl + '\'' +
+                ", city='" + city + '\'' +
                 '}';
     }
 }

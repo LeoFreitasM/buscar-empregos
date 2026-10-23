@@ -18,7 +18,10 @@ public class Jobs {
     @Column(nullable = false, length = 255)
     private String link;
 
-    private LocalDateTime dataCadastro = LocalDateTime.now();
+    @Column(nullable = false, length = 255)
+    private String cityJob;
+
+    private LocalDateTime date = LocalDateTime.now();
 
 
     public Jobs(){
@@ -49,15 +52,30 @@ public class Jobs {
         this.link = link;
     }
 
-    public LocalDateTime getDataCadastro(){
-        return dataCadastro;
+    public LocalDateTime getDate(){
+        return date;
     }
 
-    public void setDataCadastro(LocalDateTime dataCadastro){
-        this.dataCadastro = dataCadastro;
+    public String getCityJob() {
+        return cityJob;
     }
 
+    public void setCityJob(String cityJob) {
+        this.cityJob = cityJob;
+    }
 
+    public void setDate(LocalDateTime date){
+        this.date = date;
+    }
 
+    @Override
+    public String toString() {
+        return "Jobs{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", link='" + link + '\'' +
+                ", cityJob='" + cityJob + '\'' +
+                ", date=" + date +
+                '}';
+    }
 }
-
