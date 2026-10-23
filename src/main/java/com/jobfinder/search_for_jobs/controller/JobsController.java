@@ -1,9 +1,7 @@
 package com.jobfinder.search_for_jobs.controller;
 
 import com.jobfinder.search_for_jobs.client.Gupy;
-
-import com.jobfinder.search_for_jobs.dto.JobResponse;
-import com.jobfinder.search_for_jobs.dto.JobsResponse;
+import com.jobfinder.search_for_jobs.dto.JobResponseData;
 import com.jobfinder.search_for_jobs.mapper.JobMapper;
 import com.jobfinder.search_for_jobs.model.Jobs;
 import com.jobfinder.search_for_jobs.service.JobsService;
@@ -20,22 +18,28 @@ public class JobsController {
     private final Gupy gupy;
     private final JobMapper jobMapper;
 
-    public JobsController(JobsService jobsService, JobMapper jobMapper, Gupy gupy, JobMapper jobMapper1) {
+    public JobsController(JobsService jobsService, JobMapper jobMapper, Gupy gupy) {
         this.jobsService = jobsService;
         this.gupy = gupy;
-        this.jobMapper = jobMapper1;
+        this.jobMapper = jobMapper;
     }
 
-    @GetMapping("/searchJobs")
+   @GetMapping("/searchJobs")
     public List<Jobs> saveJobs(){
 
         return jobsService.saveJob();
     }
 
     @GetMapping("/searchData")
-    public List<Jobs> findAll(){
+    public List<JobResponseData> findAll(){
 
        return jobsService.findAll();
     }
+
+  /* @GetMapping("/searchData/ ")
+    public List<Jobs> findByTitle(@PathVariable String request){
+
+        return jobsService.findTitle(request);
+    }*/
 
 }
