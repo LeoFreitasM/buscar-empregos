@@ -64,9 +64,15 @@ public class JobsService {
         int i = 0;
         while(i < sized){
 
+<<<<<<< Updated upstream
             // Verificar se a vaga existe ou não para poder salva-lá
 
             jobs.add(jobsRepository.save(jobMapper.toEntity(jobsResponse.getData().get(i))));
+=======
+            if (jobResponse.get(i).getState().equals("São Paulo")) {
+            jobs.add(jobsRepository.save(jobMapper.toEntity(jobResponse.get(i))));
+            }
+>>>>>>> Stashed changes
             i++;
         }
 

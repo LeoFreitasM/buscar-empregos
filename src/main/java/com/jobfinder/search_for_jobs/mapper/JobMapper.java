@@ -10,16 +10,20 @@ public class JobMapper {
 
     private final Gupy gupy;
 
-    public JobMapper(Gupy gupy){
+    public JobMapper(Gupy gupy) {
         this.gupy = gupy;
     }
 
-    public Jobs toEntity(JobResponse response){
+    public Jobs toEntity(JobResponse response) {
 
         Jobs job = new Jobs();
 
         job.setTitle(response.getName());
         job.setLink(response.getJobUrl());
+<<<<<<< Updated upstream
+=======
+        job.setStateJob(response.getState());
+>>>>>>> Stashed changes
 
         return job;
     }

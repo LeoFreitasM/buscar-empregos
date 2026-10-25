@@ -18,7 +18,14 @@ public class Jobs {
     @Column(nullable = false, length = 255)
     private String link;
 
+<<<<<<< Updated upstream
     private LocalDateTime dataCadastro = LocalDateTime.now();
+=======
+    @Column(nullable = false, length = 255)
+    private String stateJob;
+
+    private LocalDateTime date = LocalDateTime.now();
+>>>>>>> Stashed changes
 
 
     public Jobs(){
@@ -53,11 +60,35 @@ public class Jobs {
         return dataCadastro;
     }
 
+<<<<<<< Updated upstream
     public void setDataCadastro(LocalDateTime dataCadastro){
         this.dataCadastro = dataCadastro;
     }
 
+=======
+    public String getStateJob() {
+        return stateJob;
+    }
+
+    public void setStateJob(String stateJob) {
+        this.stateJob = stateJob;
+    }
+>>>>>>> Stashed changes
 
 
+<<<<<<< Updated upstream
 }
 
+=======
+    @Override
+    public String toString() {
+        return "Jobs{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", link='" + link + '\'' +
+                ", stateJob='" + stateJob + '\'' +
+                ", date=" + date +
+                '}';
+    }
+}
+>>>>>>> Stashed changes

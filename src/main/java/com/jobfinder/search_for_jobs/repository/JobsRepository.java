@@ -8,8 +8,12 @@ import java.util.List;
 
 public interface JobsRepository extends JpaRepository<Jobs, Long> {
 
+<<<<<<< Updated upstream
     JobResponse existsByLink(String link);
 
     /*List<Jobs> saveAll(List<Jobs> jobs);*/
+=======
+    boolean  existsByLink(String link);
+>>>>>>> Stashed changes
 
 }

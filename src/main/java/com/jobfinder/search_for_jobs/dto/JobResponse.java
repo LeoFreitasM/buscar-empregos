@@ -7,7 +7,11 @@ public class JobResponse {
 
     private String name;
     private String jobUrl;
+<<<<<<< Updated upstream
 
+=======
+    private String state;
+>>>>>>> Stashed changes
 
     public JobResponse(){
 
@@ -30,11 +34,26 @@ public class JobResponse {
         this.jobUrl = jobUrl;
     }
 
+<<<<<<< Updated upstream
+=======
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+>>>>>>> Stashed changes
     @Override
     public String toString() {
         return "JobResponse{" +
                 "name='" + name + '\'' +
                 ", jobUrl='" + jobUrl + '\'' +
+<<<<<<< Updated upstream
+=======
+                ", state='" + state + '\'' +
+>>>>>>> Stashed changes
                 '}';
     }
 }
