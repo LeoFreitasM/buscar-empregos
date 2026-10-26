@@ -7,7 +7,7 @@ public class JobResponse {
 
     private String name;
     private String jobUrl;
-    private String city;
+    private String state;
 
     public JobResponse(){
 
@@ -29,12 +29,12 @@ public class JobResponse {
         this.jobUrl = jobUrl;
     }
 
-    public String getCity() {
-        return city;
+    public String getState() {
+        return state;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setState(String state) {
+        this.state = state;
     }
 
     @Override
@@ -42,7 +42,7 @@ public class JobResponse {
         return "JobResponse{" +
                 "name='" + name + '\'' +
                 ", jobUrl='" + jobUrl + '\'' +
-                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
                 '}';
     }
 }

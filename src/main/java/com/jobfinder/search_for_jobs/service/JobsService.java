@@ -46,9 +46,9 @@ public class JobsService {
         int i = 0;
         while (i < jobsResponse.getData().size()) {
 
-            //if (jobResponse.get(i).getCity().equals("São Paulo")) {
+            if (jobResponse.get(i).getState().equals("São Paulo")) {
             jobs.add(jobsRepository.save(jobMapper.toEntity(jobResponse.get(i))));
-            //}
+            }
             i++;
         }
         return jobs;

@@ -2,10 +2,10 @@ package com.jobfinder.search_for_jobs.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jobfinder.search_for_jobs.dto.JobsResponse;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 
 import java.io.IOException;
 import java.net.URI;
@@ -13,9 +13,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-//@Component
-@RestController
-@RequestMapping("/gupy")
+
+@Component
 public class Gupy {
 
   private final HttpClient client = HttpClient.newHttpClient();
@@ -24,14 +23,12 @@ public class Gupy {
 
   }
 
-  @GetMapping("/teste")
   public JobsResponse searchForJob() {
       //https://portal.gupy.io/api/job-search/jobs?jobName=Desenvolvedor%20Junior&limit=20&offset=100
-      //https://portal.gupy.io/api/job-search/job-companies?city=S%C3%A3o%20Paulo&jobName=estagio%20administrativo&limit=2&sortBy=company&sortOrder=asc&state=S%C3%A3o%20Paulo
       //https://portal.gupy.io/api/job-search/jobs?jobName=assistente%20administrativo&limit=20&offset=20
 
    HttpRequest request = HttpRequest.newBuilder()
-           .uri(URI.create("https://portal.gupy.io/api/job-search/jobs?jobName=auxiliar%20administrativo&limit=12&offset=0"))
+           .uri(URI.create("https://portal.gupy.io/api/job-search/jobs?jobName=analista%20sistemas&limit=20&offset=20"))
            .GET()
            .build();
 

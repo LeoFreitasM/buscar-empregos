@@ -36,10 +36,4 @@ public class JobsController {
        return jobsService.findAll();
     }
 
-  /* @GetMapping("/searchData/ ")
-    public List<Jobs> findByTitle(@PathVariable String request){
-
-        return jobsService.findTitle(request);
-    }*/
-
 }

@@ -22,7 +22,7 @@ public class JobMapper {
 
         job.setTitle(response.getName());
         job.setLink(response.getJobUrl());
-        job.setCityJob(response.getCity());
+        job.setStateJob(response.getState());
 
         return job;
     }

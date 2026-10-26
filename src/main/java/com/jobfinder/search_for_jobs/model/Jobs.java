@@ -19,7 +19,7 @@ public class Jobs {
     private String link;
 
     @Column(nullable = false, length = 255)
-    private String cityJob;
+    private String stateJob;
 
     private LocalDateTime date = LocalDateTime.now();
 
@@ -56,12 +56,12 @@ public class Jobs {
         return date;
     }
 
-    public String getCityJob() {
-        return cityJob;
+    public String getStateJob() {
+        return stateJob;
     }
 
-    public void setCityJob(String cityJob) {
-        this.cityJob = cityJob;
+    public void setStateJob(String stateJob) {
+        this.stateJob = stateJob;
     }
 
     public void setDate(LocalDateTime date){
@@ -74,7 +74,7 @@ public class Jobs {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", link='" + link + '\'' +
-                ", cityJob='" + cityJob + '\'' +
+                ", stateJob='" + stateJob + '\'' +
                 ", date=" + date +
                 '}';
     }
